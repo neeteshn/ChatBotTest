@@ -17,11 +17,11 @@ public class Billing_InteractionTest extends BaseE2ETest {
 
 		try {
 			if (readFileContent(getGenericFileName("billing_request1")) != null) {
-				String response = given().headers("Content-Type", "application/json").headers("api_key","eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiI0MjA5ZTMwYy0wMWRmLTRjYTgtODhlNC0xNzA3Mzk3ZjJkMGEifQ.1sJC2g2ovvOj-kDkmjLiEOpvL2voz5pIaJc-20FW09U")
+				String response = given().headers("Content-Type", "application/json").headers("api_key",testProperties.get("api_key"))
 						.body(readFileContent(getGenericFileName("billing_request1")))
 						.post("/genbot/bot/process").body().toString();
 			
-			String intent =	given().headers("Content-Type", "application/json").headers("api_key","eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiI0MjA5ZTMwYy0wMWRmLTRjYTgtODhlNC0xNzA3Mzk3ZjJkMGEifQ.1sJC2g2ovvOj-kDkmjLiEOpvL2voz5pIaJc-20FW09U")
+			String intent =	given().headers("Content-Type", "application/json").headers("api_key",testProperties.get("api_key"))
 				.body(readFileContent(getGenericFileName("billing_request1")))
 				.post("/genbot/bot/process").body().jsonPath().getString("intent");
 			
