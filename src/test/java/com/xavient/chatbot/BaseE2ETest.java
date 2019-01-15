@@ -1,4 +1,4 @@
-package com.xavient.chatbot.e2etests;
+package com.xavient.chatbot;
 
 
 import static java.nio.file.Files.readAllBytes;
@@ -29,7 +29,7 @@ public class BaseE2ETest {
         }
 
         Yaml yaml = new Yaml();
-        FileInputStream fileInputStream = new FileInputStream("src/e2eTest/resources/" + "properties.yml");
+        FileInputStream fileInputStream = new FileInputStream("src/main/resources/" + "properties.yml");
         Map<String, Map<String, String>> data = (Map<String, Map<String, String>>) yaml.load(fileInputStream);
         if (!data.keySet().contains(environmentName)) {
             throw new IllegalArgumentException("Unable to find specified environment named " + environmentName);
@@ -41,7 +41,7 @@ public class BaseE2ETest {
     }
 
     protected byte[] readFileContent(final String filePath) throws IOException {
-        return readAllBytes(get("src/e2eTest/resources/" + filePath));
+        return readAllBytes(get("src/main/resources/" + filePath));
     }
 
     protected String getGenericFileName(String testCaseName) {

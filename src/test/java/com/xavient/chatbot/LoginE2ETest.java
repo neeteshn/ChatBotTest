@@ -1,4 +1,4 @@
-package com.xavient.chatbot.e2etests;
+package com.xavient.chatbot;
 
 
 
