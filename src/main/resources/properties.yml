@@ -3,7 +3,16 @@ dev:
     api_key: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiI0MjA5ZTMwYy0wMWRmLTRjYTgtODhlNC0xNzA3Mzk3ZjJkMGEifQ.1sJC2g2ovvOj-kDkmjLiEOpvL2voz5pIaJc-20FW09U
     Expected_offer_intent: "2954"
     Expected_price_intent: "2955"
+    Expected_device_intent: "2956"
+    Expected_color_intent: "2957"
     Default_negative_intent: "1908"
+    excelPath: "../ChatBotTest/src/main/resources/template-testing.xlsx"
+    bot_id: "1"
+    language_id: "en"
+    context_id: "0"
+    jid: "kbbot@xavient.telusinternational.com"
+    message_id: "0"
+    session_id: "test"
 
 qa:
   endPoint: https://qakbbot.xavlab.xyz

@@ -17,7 +17,7 @@ import org.yaml.snakeyaml.Yaml;
 
 public class BaseE2ETest {
     private static final Logger LOGGER = LoggerFactory.getLogger(BaseE2ETest.class);
-    protected Map<String, String> testProperties;
+    protected   Map<String, String> testProperties;
     public int count=0;
 
     @Before
