@@ -58,9 +58,7 @@ public void clickVocabularyimage() {
 		//WebDriverWait wait = new WebDriverWait(driver, 100);
 		//wait.until(ExpectedConditions.elementToBeClickable(vocabularyimage));
         actions.moveToElement(vocabularyimage).click().perform();
-        //vocabularyimage.click();
-        //JavascriptExecutor executor = (JavascriptExecutor)driver;
-        //executor.executeScript("arguments[0].click();", vocabularyimage);
+        
 	
 }
 

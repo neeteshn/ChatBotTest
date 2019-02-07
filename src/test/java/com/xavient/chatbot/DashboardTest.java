@@ -47,7 +47,7 @@ public class DashboardTest extends BaseE2ETest {
     driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
     //dashboard.clickonactiveConversation();
    
-    //driver.quit();
+    driver.quit();
 		} catch (Exception e) {
 			System.out.println("exception is"+e);
 		}

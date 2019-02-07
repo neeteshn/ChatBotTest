@@ -48,21 +48,16 @@ public class VocabularyTest extends BaseE2ETest {
 			vocabulary.clickVocabularyimage();
 			driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 			vocabulary.isVocabulartyTitledisplayed();
-			//driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 			vocabulary.clickBotname();
-		
-			System.out.println("print1");
-			vocabulary.additemDisplayed();
-			System.out.println("print2");
+		    vocabulary.additemDisplayed();
 			System.out.println(excel.getdata(1, 1, 2));
 			System.out.println(excel.getdata(1, 1, 3));
 			vocabulary.addItem().sendKeys(excel.getdata(1, 1, 2));
-			System.out.println("print3");
 			vocabulary.addSynonym().sendKeys(excel.getdata(1, 1, 3));
 			vocabulary.addSynonym().click();
 			vocabulary.addSynonym().sendKeys(Keys.ENTER);
 			vocabulary.clickSaveSynonym();
-			//vocabulary.checkItemAdded();
+			
 			
 			// checkitemname already exists
 			List<WebElement> itemname = driver.findElements(By.className("fields"));
