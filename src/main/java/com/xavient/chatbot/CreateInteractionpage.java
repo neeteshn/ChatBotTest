@@ -1,30 +1,18 @@
 package com.xavient.chatbot;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CreateInteractionpage {
 private WebDriver driver;
 
-	
-	private static WebElement element = null;
+    private static WebElement element = null;
 
-	//@FindBy(xpath = "//a[@title='Central Repository']")
-	@FindBy(xpath="//ul[@class='nav-link']//li[4]")
-	//@FindBy(xpath="//img[@src='/static/media/database-White.d6ce400d.svg']")
+    @FindBy(xpath="//ul[@class='nav-link']//li[4]")
     public  WebElement centralRepoimage;
 	
 	@FindBy(xpath = "//a[@title='FLOW']")
@@ -103,7 +91,7 @@ public void clickOkBtn()
 	
 }
 
-public void ClickaddBtn() {
+public void clickaddBtn() {
 	Actions actions = new Actions(driver);
 	actions.moveToElement(addBtn);
 	actions.click().build().perform();

@@ -1,13 +1,12 @@
 package com.xavient.chatbot;
 
-import java.util.concurrent.TimeUnit;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import java.util.concurrent.TimeUnit;
 
 public class CreateInteractionTest  extends BaseE2ETest{
 
@@ -40,7 +39,6 @@ public class CreateInteractionTest  extends BaseE2ETest{
 		try {
 			CreateInteractionpage interact = new CreateInteractionpage(driver);
 			ExcelDataConfig excel = new ExcelDataConfig((testProperties.get("excelPath")));
-			//driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 			interact.clickCentralbtn();
 			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 			interact.clickFlowbtn();
@@ -51,7 +49,7 @@ public class CreateInteractionTest  extends BaseE2ETest{
 		    interact.clickNewinteraction();
 			interact.templateName.sendKeys(excel.getdata(1, 1, 7));
 			interact.clickOkBtn();
-			interact.ClickaddBtn();
+			interact.clickaddBtn();
 		    
 			interact.addQuestion.sendKeys(excel.getdata(1, 1, 9));
 			interact.textAnswer.sendKeys(excel.getdata(1, 1, 10));
