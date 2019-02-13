@@ -1,4 +1,6 @@
 package com.xavient.chatbot;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -91,10 +93,11 @@ public void clickOkBtn()
 	
 }
 
-public void clickaddBtn() {
+public void clickaddBtn() throws InterruptedException{
 	Actions actions = new Actions(driver);
-	actions.moveToElement(addBtn);
-	actions.click().build().perform();
+	Thread.sleep(3000);
+	driver.findElement(By.xpath("//div[@class='add-btn']")).click();
+
 }
 
 }
