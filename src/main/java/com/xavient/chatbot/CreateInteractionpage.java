@@ -45,8 +45,38 @@ public class CreateInteractionpage {
 	@FindBy(xpath="//div[contains(text(),'Text')]")
 	public WebElement textBtn;
 
-	@FindBy(xpath="//div[@class='ql-editor ql-blank']//p")
+	@FindBy(xpath="//div[@class='ql-editor ql-blank']")
 	public WebElement textAnswer;
+
+	@FindBy(xpath="//img[contains(@src,'/static/media/link_Accessible_Green')]")
+	public WebElement URLBtn;
+
+	@FindBy(xpath="//input[@placeholder='Enter the URL here']")
+	public WebElement URLAnswer;
+
+	@FindBy(xpath="//div[text()='Shuffle']")
+	public WebElement ShuffleBtn;
+
+	@FindBy(xpath="//span[text()='ADD ANSWER +']")
+	public WebElement ShuffleAddAnswerBtn;
+
+	@FindBy(xpath="//textarea[@placeholder='Type your text here']")
+	public WebElement ShuffleAnswer;
+
+	@FindBy(xpath="//div[text()='Quick Reply']")
+	public WebElement QuickReplyBtn;
+
+	@FindBy(xpath="//span[@class='blockheadig rightblock addReply']")
+	public WebElement QuickReplyAddReplyBtn;
+
+	@FindBy(xpath="//input[@placeholder='Name can be changed here']")
+	public WebElement QuickReplyButtonTitle;
+
+	@FindBy(xpath="//input[@placeholder='Enter query']")
+	public WebElement QuickReplyEnterQuery;
+
+	@FindBy(xpath="//button[text()='Add']")
+	public WebElement QucikReplyaddBtn;
 
 	@FindBy(xpath="//span[contains(text(),'Save')]")
 	public WebElement saveBtn;

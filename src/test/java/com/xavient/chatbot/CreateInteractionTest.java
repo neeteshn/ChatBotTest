@@ -39,6 +39,7 @@ public class CreateInteractionTest  extends BaseE2ETest{
         try {
             CreateInteractionpage interact = new CreateInteractionpage(driver);
             ExcelDataConfig excel = new ExcelDataConfig((testProperties.get("excelPath")));
+            Thread.sleep(3000);
             interact.clickCentralbtn();
             driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
             interact.clickFlowbtn();
@@ -53,8 +54,25 @@ public class CreateInteractionTest  extends BaseE2ETest{
 
             interact.addQuestion.sendKeys(excel.getdata(1, 1, 9));
             interact.textBtn.click();
+            Thread.sleep(3000);
+
+            interact.textAnswer.click();
             interact.textAnswer.sendKeys(excel.getdata(1, 1, 10));
             interact.templateTitle.sendKeys(excel.getdata(1, 1, 8));
+
+            interact.URLBtn.click();
+            interact.URLAnswer.sendKeys(excel.getdata(1, 1, 11));
+
+            interact.ShuffleBtn.click();
+            interact.ShuffleAddAnswerBtn.click();
+            interact.ShuffleAnswer.sendKeys(excel.getdata(1, 1, 12));
+
+            interact.QuickReplyBtn.click();
+            interact.QuickReplyAddReplyBtn.click();
+            interact.QuickReplyButtonTitle.sendKeys(excel.getdata(1, 1, 16));
+            interact.QuickReplyEnterQuery.sendKeys(excel.getdata(1, 1, 17));
+            interact.QucikReplyaddBtn.click();
+
             interact.saveBtn.click();
         }
         catch (Exception e) {
