@@ -49,6 +49,8 @@ public class ChatBotModuleTest extends BaseE2ETest {
             Thread.sleep(2000);
             chat.selectFolder();
             Thread.sleep(2000);
+            chat.clickFeedback();
+            Thread.sleep(2000);
             chat.clickImport();
             chat.verifyMsg();
 

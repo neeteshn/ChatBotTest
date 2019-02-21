@@ -62,14 +62,16 @@ public class ChatbotModule {
     }
     public void selectFolder(){
        QAFolder.click();
-        WebDriverWait wait = new WebDriverWait(driver, 200);
-        wait.until(ExpectedConditions.elementToBeClickable(feedback)).click();
     }
     public void verifyMsg(){
         importSuccessMsg.isDisplayed();
         WebDriverWait wait = new WebDriverWait(driver, 200);
         wait.until(ExpectedConditions.elementToBeClickable(trainBot)).click();
         trainBotSuccessMsg.isDisplayed();
+    }
+
+    public void clickFeedback(){
+        feedback.click();
     }
 
 }
