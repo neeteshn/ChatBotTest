@@ -1,6 +1,6 @@
 dev:
-    endPoint: https://qakbbot.xavlab.xyz
-    api_key: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiI0MjA5ZTMwYy0wMWRmLTRjYTgtODhlNC0xNzA3Mzk3ZjJkMGEifQ.1sJC2g2ovvOj-kDkmjLiEOpvL2voz5pIaJc-20FW09U
+    endPoint: XXXXX
+    api_key: XXXXXXXXXXXXXX
     Expected_offer_intent: "2954"
     Expected_price_intent: "2955"
     Expected_device_intent: "2956"
@@ -10,9 +10,9 @@ dev:
     bot_id: "1"
     language_id: "en"
     context_id: "0"
-    jid: "kbbot@xavient.telusinternational.com"
+    jid: "XXXXXXXXXXX"
     message_id: "0"
     session_id: "test"
 
 qa:
-  endPoint: https://qakbbot.xavlab.xyz
+  endPoint: XXXXXXXXXXXX
